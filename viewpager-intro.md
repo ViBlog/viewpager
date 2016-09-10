@@ -248,7 +248,7 @@ private void initializeViews() {
 
 ## TextColor change
 color/selector.xml
-
+textColor -> why not highlighted in lint?
 
 <!-- Images -->
 [viewPagerAnimated]:images/simpleviewpager-view.gif
