@@ -228,8 +228,22 @@ PagerTabStrip is similar but have slight modifications, it is separated from the
 </android.support.v4.view.ViewPager>
 ```
 
-## Buffer
-- Page Left/Right buffer and increase it
+## Offscreen Pages Buffer
+By default a ViewPager will load the previous and next page. If you have a predefined number of pages, by example a list of Local, Country and World Ranking. It can be usefull to increase it to have a smooth scroll experience between them.
+
+To do it, you will need to call ```public void setOffscreenPageLimit(int limit)``` and providing a higher limit (1 is the default setting). But always keep in mind the more you set, the more the device will have to retain in memory. On low end devices and complex Views it can cause OutOfMemory crash and burn your UI to ashes... 
+
+To keep all tabs from previous example (4 pages), we will need to set it to 3 offscreen pages or list size minus one (current page viewed).
+
+```java
+//MainActivity
+private void initializeViews() {
+    List<PageData> pageDataList = getPageDataList();
+    MainActivityPagerAdapter adapter = new MainActivityPagerAdapter(pageDataList);
+    activityMainViewpager.setAdapter(adapter);
+    activityMainViewpager.setOffscreenPageLimit(pageDataList.size() - 1); // <-- new line
+}
+```
 
 ## TextColor change
 color/selector.xml
