@@ -79,10 +79,13 @@ public class MainActivityPagerAdapter extends PagerAdapter {
 ```
 
 In the instantiateItem I sometimes see inflating view like this
-```View view = container.inflate(context, R.layout.item_page_data, null);``` avoid it. Sean Farrell explains it very well in [Understanding Android's LayoutInflater.inflate()][layoutInflaterExplanation]
+```View view = container.inflate(context, R.layout.item_page_data, null);```:
+- Avoid to inject the activity's context into your ViewPager if you can get it from an other way (container.getContext() by example)
+- Avoid to set null as root in your inflater. 
 
 > Lint will now warn you not to pass in null for root. Your app won’t crash in this scenario, but it can misbehave. When your child View doesn’t know the correct LayoutParams for its root ViewGroup, it will try to determine them on its own using generateDefaultLayoutParams.
 These default LayoutParams might not be what you desired. The LayoutParams that you specified in XML will get ignored. We might have specified that our child View should match the width of our parent View, but ended up with our parent View wrapping its own content and ending up much smaller than we expected.
+Sean Farrell in [Understanding Android's LayoutInflater.inflate()][layoutInflaterExplanation]
 
 Finally we have to tie everything together. 
 - get data we will display
@@ -124,13 +127,13 @@ Here we go, our ViewPager is displayed.
 
 ![Simple View pager animated][viewPagerAnimated]
 
-
+## Adding a Pager Indicator
+### 
 
 Can be used with Fragments and Views
 
-# Intro to ViewPager
+# To Speak about
 - Like a listview that you swipe horizontally
-- Need to write 3 (4?) methods to make it work
 - finding the context inside to create view
 - Page Left/Right buffer and increase it
 
