@@ -1,3 +1,4 @@
+Currently written section that will be displayed in http://www.dubedout.eu, NOT FINAL.
 
 A ViewPager is a View letting user swiping left and right to display full pages. As the opposite of LinearLayout or RecyclerView, a swipe don't pass over multiple views. One swipe, one new page displayed. 
 
