@@ -1,12 +1,13 @@
-Currently written section that will be displayed in http://www.dubedout.eu, NOT FINAL.
+Writing post that will be displayed in http://www.dubedout.eu, NOT FINAL.
 
-A ViewPager is a View letting user swiping left and right to display full pages. As the opposite of LinearLayout or RecyclerView, a swipe don't pass over multiple views. One swipe, one new page displayed. 
+Let's learn how to build a great ViewPager leveraging the support-v4 library for the Pager Indicator.
+But what's a ViewPager? A ViewPager is a View letting user swiping left and right to display pages. Unlike ListViews and RecyclerViews, the swipe will stop on the next Page. We often see examples of FragmentViewPager but less often from his simpler View centric one.
 
-Let's start by the basics by implementing a really simple ViewPager.
+We will learn here how to add a ViewPager on our Activity.
 
-# Basics
-## ViewPager with views
-First we need to create the object that will hold the data. We will only display a ```TextView``` so a very basic one will do.
+# ViewPager
+## Data
+For this example we will create an object that will hold the data that will be displayed in the ```TextView```.
 
 ```java
 public class PageData {
@@ -18,7 +19,8 @@ public class PageData {
 }
 ```
 
-Then we need to create the Main Activity layout, including the ViewPager.
+## Layout
+Now we write the MainActivity Layout including the ViewPager. *Do not forget to add support-v4 in your build.graddle.*
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -37,19 +39,19 @@ Then we need to create the Main Activity layout, including the ViewPager.
 </RelativeLayout>
 ```
 
-It's not that different from an old ListView, and needs his Adapter. 
-PagerAdapter is the one dedicated to ViewPager. 
+## Adapter
+A ViewPager is not a lot different from a ListView and it need his own PagerAdapter that will handle the data.
 
-To make it work we needs to implement at least 4 methods:
+To make it work we need to implement four methods:
 - instantiateItem 
 - getCount
 - isViewFromObject
 - destroyItem
 
-Forget isViewFromObject and your ViewPager will display nothing.
-Forget destroyItem and you will get a crash when the ViewPager will try to remove unused Views.
+If you forget isViewFromObject, your ViewPager will not display the view.  
+If you forget destroyItem, you will get a crash when the ViewPager will try to remove unused Views.
 
-Let's create the most basic PagerAdapter to display a single TextView.
+Let's create the PagerAdapter.
 
 ```java
 public class MainActivityPagerAdapter extends PagerAdapter {
@@ -93,18 +95,18 @@ public class MainActivityPagerAdapter extends PagerAdapter {
 }
 ```
 
-In the instantiateItem I sometimes see inflating view like this
-```View view = container.inflate(context, R.layout.item_page_data, null);```:
-- Avoid to inject the activity's context into your ViewPager if you can get it from an other way (container.getContext() by example)
-- Avoid to set null as root in your inflater. 
+In the instantiateItem I sometimes see inflating views like this: ```View view = container.inflate(context, R.layout.item_page_data, null);```. There is two "errors":
+- Do not inject the activity's context into your ViewPager if you can get it from an other way (container.getContext() by example)
+- Do not set null as root in your inflater
+
+As Sean Farrell explains it weell in [Understanding Android's LayoutInflater.inflate()][layoutInflaterExplanation]
 
 > Lint will now warn you not to pass in null for root. Your app won’t crash in this scenario, but it can misbehave. When your child View doesn’t know the correct LayoutParams for its root ViewGroup, it will try to determine them on its own using generateDefaultLayoutParams.
-These default LayoutParams might not be what you desired. The LayoutParams that you specified in XML will get ignored. We might have specified that our child View should match the width of our parent View, but ended up with our parent View wrapping its own content and ending up much smaller than we expected. - Sean Farrell in [Understanding Android's LayoutInflater.inflate()][layoutInflaterExplanation]
+These default LayoutParams might not be what you desired. The LayoutParams that you specified in XML will get ignored. We might have specified that our child View should match the width of our parent View, but ended up with our parent View wrapping its own content and ending up much smaller than we expected. 
 
-Finally we have to tie everything together. 
-- get data we will display
-- create adapter we wrote above
-- and set it to the ViewPager
+## Activity
+
+The final step is to tie everything together. 
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -141,16 +143,15 @@ Here we go, our ViewPager is displayed.
 
 ![Simple View pager animated][viewPagerAnimated]
 
-## Adding a Pager Indicator
-A Pager Indicator is a View that let the user know where he is. It can be dots, tabs, titles, or other.
-On the support-v4 library you can find ```PagerTabStrip```, ```PagerTitleStrip``` that we will study first. 
-On the ViewPagerIndicator library there is lot more available that we will study after.
+# Adding a Pager Indicator
+A Pager Indicator is a View that displays the current page and let the user know where he is. It can be dots, tabs, titles, or other.
+On the support-v4 library we can find ```PagerTabStrip```, ```PagerTitleStrip``` that we will study. You can find a lot more of other displays with the [ViewPagerIndicator][ViewPagerIndicator], [PagerSlidingTabStrip][PagerSlidingTabStrip], [CircleIndicator][CircleIndicator], etc...
 
-### Android Support-v4 library
+## Android Support-v4 library
 To be able to display a title we need to Override the ```getPageTitle(int position)``` method. To do so we need to provide a title in the adapter.
 You can use a simple switch case with a title but I don't find this very clean. 
 First, you will need to inject the activity context to be able to use the ressources and access the multiple languages version via the ```getString()```. 
-Then, If you need to add a page in one point in time, you will have to modify the switch case and the ```itemList```. 
+Then, If you need to add a page in one point in time, you will have to modify the switch case and the ```itemList``` accordingly. In my opinion it's error prone.
 
 So let's start by modifying our data holder.
 
@@ -166,7 +167,7 @@ public class PageData {
 }
 ```
 
-We need now to add the title when creating the data holder.
+We need now to add the title when creating the data.
 
 ```java
 // MainActivity
@@ -191,12 +192,12 @@ public CharSequence getPageTitle(int position) {
 }
 ```
 
-#### v4.PagerTitleStrip
+### v4.PagerTitleStrip
 PagerTitleStrip will display the Title provided and display the previous and next page title and they are not clickable to scroll to the next/previous page.
 
 ![PagerTitleStrip rendering][pagerTitleStripAnimated]
 
-To use it you will need to add into into the ViewPager like below
+To use it you will need to add it into the ViewPager like below.
 
 ```
 <android.support.v4.view.ViewPager
@@ -211,8 +212,8 @@ To use it you will need to add into into the ViewPager like below
 </android.support.v4.view.ViewPager>
 ```
 
-#### v4.PagerTabStrip
-PagerTabStrip is similar but have slight modifications, it is separated from the content by a divider, it underlines the selected page and let the user click on the next and previous page to navigate to it. 
+### v4.PagerTabStrip
+PagerTabStrip is similar with slight differences. It is separated from the content by a divider, it underlines the selected page and let the user click on the next and previous page to navigate. 
 
 ![PagerTabStrip rendering][pagerTabStripAnimated]
 
@@ -246,9 +247,26 @@ private void initializeViews() {
 }
 ```
 
-## TextColor change
-color/selector.xml
-textColor -> why not highlighted in lint?
+## OnPageChangeListener
+If you need to get an event each time the page is switched use the code below. ```SimpleOnPageChangeListener``` saves some boiler plate code.
+
+```java
+activityMainViewpager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+    @Override
+    public void onPageSelected(int position) {
+        // your code 
+        Toast.makeText(MainActivity.this, "New page selected: "+position, Toast.LENGTH_SHORT).show();
+    }
+});
+```
+
+# Wrap Up
+Here we are, we have done a complete ViewPager with some basic informations. I'd like to speak about a lot of other tweaks on ViewPagers like the Auto Scroll Infinite View Pager that a future client will try to sneak in your UI but it will be for another day :)
+
+Ow, If you want to learn about the FragmentViewPager, take a look to the [CodePath Android Guides][CodePathFragmentViewPager]. They have done an amazing job compiling all this data.
+
+You can find the code in my [ViewPager-Code repo][GitCode]
+
 
 <!-- Images -->
 [viewPagerAnimated]:images/simpleviewpager-view.gif
@@ -257,5 +275,10 @@ textColor -> why not highlighted in lint?
 
 <!-- LINKS -->
 [layoutInflaterExplanation]:https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+[ViewPagerIndicator]:https://github.com/JakeWharton/ViewPagerIndicator
+[PagerSlidingTabStrip]:https://github.com/astuetz/PagerSlidingTabStrip
+[CircleIndicator]:https://github.com/ongakuer/CircleIndicator
+[CodePathFragmentViewPager]:https://github.com/codepath/android_guides/wiki/ViewPager-with-FragmentPagerAdapter
+[GitCode]:https://github.com/ViBlog/ViewPager-Code
 
 
