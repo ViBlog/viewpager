@@ -1,4 +1,4 @@
-Writing post that will be displayed in http://www.dubedout.eu, NOT FINAL.
+Writing a post that will be displayed in http://www.dubedout.eu, NOT FINAL.
 
 Let's learn how to build a great ViewPager leveraging the support-v4 library for the Pager Indicator.
 But what's a ViewPager? A ViewPager is a View letting user swiping left and right to display pages. Unlike ListViews and RecyclerViews, the swipe will stop on the next Page. We often see examples of FragmentViewPager but less often from his simpler View centric one.
@@ -7,7 +7,7 @@ We will learn here how to add a ViewPager on our Activity.
 
 # ViewPager
 ## Data
-For this example we will create an object that will hold the data that will be displayed in the ```TextView```.
+For this example, we will create an object that will hold the data that will be displayed in the ```TextView```.
 
 ```java
 public class PageData {
@@ -40,7 +40,7 @@ Now we write the MainActivity Layout including the ViewPager. *Do not forget to 
 ```
 
 ## Adapter
-A ViewPager is not a lot different from a ListView and it need his own PagerAdapter that will handle the data.
+A ViewPager is not a lot different from a ListView, and it needs his PagerAdapter that will handle the data.
 
 To make it work we need to implement four methods:
 - instantiateItem 
@@ -49,7 +49,7 @@ To make it work we need to implement four methods:
 - destroyItem
 
 If you forget isViewFromObject, your ViewPager will not display the view.  
-If you forget destroyItem, you will get a crash when the ViewPager will try to remove unused Views.
+If you forget destroyItem, you will get a crash when the ViewPager tries to remove unused Views.
 
 Let's create the PagerAdapter.
 
@@ -95,8 +95,8 @@ public class MainActivityPagerAdapter extends PagerAdapter {
 }
 ```
 
-In the instantiateItem I sometimes see inflating views like this: ```View view = container.inflate(context, R.layout.item_page_data, null);```. There is two "errors":
-- Do not inject the activity's context into your ViewPager if you can get it from an other way (container.getContext() by example)
+In the instantiateItem, I sometimes see inflating views like this: ```View view = container.inflate(context, R.layout.item_page_data, null);```. There is two "errors":
+- Do not inject the activity's context into your ViewPager if you can get it from another way (container.getContext() by example)
 - Do not set null as root in your inflater
 
 As Sean Farrell explains it weell in [Understanding Android's LayoutInflater.inflate()][layoutInflaterExplanation]
@@ -144,14 +144,14 @@ Here we go, our ViewPager is displayed.
 ![Simple View pager animated][viewPagerAnimated]
 
 # Adding a Pager Indicator
-A Pager Indicator is a View that displays the current page and let the user know where he is. It can be dots, tabs, titles, or other.
+A Pager Indicator is a View that shows the current page and let the user know where he is. It can be dots, tabs, titles, or other.
 On the support-v4 library we can find ```PagerTabStrip```, ```PagerTitleStrip``` that we will study. You can find a lot more of other displays with the [ViewPagerIndicator][ViewPagerIndicator], [PagerSlidingTabStrip][PagerSlidingTabStrip], [CircleIndicator][CircleIndicator], etc...
 
 ## Android Support-v4 library
-To be able to display a title we need to Override the ```getPageTitle(int position)``` method. To do so we need to provide a title in the adapter.
-You can use a simple switch case with a title but I don't find this very clean. 
-First, you will need to inject the activity context to be able to use the ressources and access the multiple languages version via the ```getString()```. 
-Then, If you need to add a page in one point in time, you will have to modify the switch case and the ```itemList``` accordingly. In my opinion it's error prone.
+To be able to display a title we need to Override the ```getPageTitle(int position)``` method. To do so, we need to provide a title in the adapter.
+You can use a simple switch case with a title, but I don't find this clean. 
+First, you will need to inject the activity context to be able to use the resources and access the multiple languages version via the ```getString()```. 
+Then, If you need to add a page at one point in time, you will have to modify the switch case and the ```itemList``` accordingly. In my opinion, it's error prone.
 
 So let's start by modifying our data holder.
 
@@ -182,7 +182,7 @@ private List<PageData> getPageDataList() {
 }
 ```
 
-Finally we Override the getPageTitle method and return the correct title.
+Finally, we Override the getPageTitle method and return the correct title.
 
 ```java
 // MainActivityPagerAdapter
@@ -193,7 +193,7 @@ public CharSequence getPageTitle(int position) {
 ```
 
 ### v4.PagerTitleStrip
-PagerTitleStrip will display the Title provided and display the previous and next page title and they are not clickable to scroll to the next/previous page.
+PagerTitleStrip will display the Title provided, show the previous and next page title not clickable.
 
 ![PagerTitleStrip rendering][pagerTitleStripAnimated]
 
@@ -231,11 +231,11 @@ PagerTabStrip is similar with slight differences. It is separated from the conte
 ```
 
 ## Offscreen Pages Buffer
-By default a ViewPager will load the previous and next page. If you have a predefined number of pages, by example a list of Local, Country and World Ranking. It can be usefull to increase it to have a smooth scroll experience between them.
+By default, a ViewPager will load the previous and next page. If you have a predefined number of pages as a list of Local, Country and World Ranking. It can be useful to increase it to have a smooth scroll experience between them.
 
-To do it, you will need to call ```public void setOffscreenPageLimit(int limit)``` and providing a higher limit (1 is the default setting). But always keep in mind the more you set, the more the device will have to retain in memory. On low end devices and complex Views it can cause OutOfMemory crash and burn your UI to ashes... 
+To do it, you will need to call ```public void setOffscreenPageLimit(int limit)``` and providing a higher limit (1 is the default setting). But always keep in mind the more you set, the more the device will have to retain in memory. On low-end devices and complex Views, it can cause an OutOfMemory crash and burn your UI to ashes... 
 
-To keep all tabs from previous example (4 pages), we will need to set it to 3 offscreen pages or list size minus one (current page viewed).
+To keep all tabs from the previous example (4 pages), we will need to set it to 3 offscreen pages or list size minus one (current page viewed).
 
 ```java
 //MainActivity
@@ -248,7 +248,7 @@ private void initializeViews() {
 ```
 
 ## OnPageChangeListener
-If you need to get an event each time the page is switched use the code below. ```SimpleOnPageChangeListener``` saves some boiler plate code.
+If you need to get an event each time the page is switched, use the code below. ```SimpleOnPageChangeListener``` saves some boilerplate code.
 
 ```java
 activityMainViewpager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -261,9 +261,9 @@ activityMainViewpager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeLi
 ```
 
 # Wrap Up
-Here we are, we have done a complete ViewPager with some basic informations. I'd like to speak about a lot of other tweaks on ViewPagers like the Auto Scroll Infinite View Pager that a future client will try to sneak in your UI but it will be for another day :)
+Here we are, we have done a complete ViewPager with some basic information. I'd like to speak about a lot of other tweaks on ViewPagers like the Auto Scroll Infinite View Pager that a future client will try to sneak in your UI, but it will be for another day :)
 
-Ow, If you want to learn about the FragmentViewPager, take a look to the [CodePath Android Guides][CodePathFragmentViewPager]. They have done an amazing job compiling all this data.
+Oh, If you want to learn about the FragmentViewPager, take a look at the [CodePath Android Guides][CodePathFragmentViewPager]. They have done a fantastic job compiling all this data.
 
 You can find the code in my [ViewPager-Code repo][GitCode]
 
@@ -280,5 +280,3 @@ You can find the code in my [ViewPager-Code repo][GitCode]
 [CircleIndicator]:https://github.com/ongakuer/CircleIndicator
 [CodePathFragmentViewPager]:https://github.com/codepath/android_guides/wiki/ViewPager-with-FragmentPagerAdapter
 [GitCode]:https://github.com/ViBlog/ViewPager-Code
-
-
