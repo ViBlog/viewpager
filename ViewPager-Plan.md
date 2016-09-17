@@ -4,16 +4,25 @@
 - finding the context inside to create view
 - Page Left/Right buffer and increase it
 
-# Basics:
+# Basics (done)
 ## Views
 ## Fragment
 ## Pager Indicators
 - ViewPager v4.PagerTabStrip
 - ViewPager v4.PagerTitleStrip
-- ViewPagerIndicator
-    display title, different adapter
+# Offscreen buffer
+# OnPageChange
+
 
 # Advanced
+## PagerIndicator
+- ViewPagerIndicator: https://github.com/JakeWharton/ViewPagerIndicator
+    display title, different adapter
+- CirclePagerIndicator : https://github.com/ongakuer/CircleIndicator
+- Google Tab indicator: https://developer.android.com/samples/SlidingTabsBasic/src/com.example.android.common/view/SlidingTabLayout.html
+http://www.android4devs.com/2015/01/how-to-make-material-design-sliding-tabs.html
+
+
 ## Updating DataSet
     - Dirty trick : http://stackoverflow.com/a/7287121/1343997
     - using tag http://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view/8024557#8024557
