@@ -21,10 +21,12 @@ Tab clickable but without ripple effect
 Tab clickable but without ripple effect  
 ![PagerSlidingTabStrip Title][psts_title]
 
+# SpringIndicator (Chenupt)
+1650 stars, 15 issues, 3 Pull Requests. [Library,][springIndicator_github_lib][ _Sample Code._][springIndicator_sample_code]
 
+## Title
+![Spring Indicator][springindicator_gif]
 
-https://github.com/chenupt/SpringIndicator 1600 stars
-spring/rubber like, inactive for 6months, 3 pull requests, 14 issues
 
 https://github.com/rubensousa/ViewPagerCards 1500 stars
 pros:  beautiful
@@ -87,13 +89,17 @@ cons: low support, new
 [vpi_simple]:images/vpi_simple_indicators.gif
 [vpi_icons]:images/vpi_icon_indicators.gif
 [psts_title]:images/psts_title_indicators.gif
+[springindicator_gif]:images/springindicator_title_indicators.gif
 
 <!-- Links -->
 [vpi_github_lib]:https://github.com/JakeWharton/ViewPagerIndicator/
-[vpi_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/java/eu/dubedout/vincent/viewpagerindicatorslibraries/components/viewpagerindicatoractivity/ViewPagerIndicatorActivity.java
+[vpi_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/res/layout/activity_view_pager_indicator.xml
 
 [pagerSlidingTabStrip_github_lib]:https://github.com/astuetz/PagerSlidingTabStrip
-[pagerSlidingTabStrip_sample_code]:
+[pagerSlidingTabStrip_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/res/layout/activity_pager_sliding_tab_strip.xml
+
+[springIndicator_github_lib]:https://github.com/chenupt/SpringIndicator
+[springIndicator_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/res/layout/activity_spring_indicator.xml
 
 
 
