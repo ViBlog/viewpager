@@ -1,17 +1,27 @@
 Android?
 PagerSlidingTabStrip
 
-https://github.com/JakeWharton/ViewPagerIndicator 8000 stars
-lot of different indicator available
-old, not material support, lot of issues oppened, 80 PR not merged, community don't know how to have one working (someone to fix this?)
-dead for 4 years
+# ViewPagerIndicator (Jake Wharton) 
+8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Library,][vpi_github_lib][ _Sample code._][vpi_sample_code]  
 
-https://github.com/astuetz/PagerSlidingTabStrip 5000 stars
-dead for 3 years
+## Title
+Tab clickable but without ripple effect  
+![ViewPagerIndicator Titles][vpi_titles]
 
-https://github.com/DevLight-Mobile-Agency/InfiniteCycleViewPager 2500 star
-pros: company support, 3d view
-cons:
+## Simple Indicators
+![ViewPagerIndicator Simple Indicators][vpi_simple]
+
+## Icon
+![ViewPagerIndicator Icons][vpi_icons] 
+
+# PagerSlidingTabStrip (Andreas Stuetz)
+5500 stars, 153 issues, 53 Pull Requests, no activity for 3 years. [Library,][pagerSlidingTabStrip_github_lib][ _Sample Code._][pagerSlidingTabStrip_sample_code]
+
+## Title
+Tab clickable but without ripple effect  
+![PagerSlidingTabStrip Title][psts_title]
+
+
 
 https://github.com/chenupt/SpringIndicator 1600 stars
 spring/rubber like, inactive for 6months, 3 pull requests, 14 issues
@@ -71,6 +81,20 @@ Check TabLayout android for creating pagerindicator custom with binding
 https://github.com/andyxialm/UltraIndicator 23 stars
 pros: different way to display indicators
 cons: low support, new
+
+<!-- Images -->
+[vpi_titles]:images/vpi_title_indicators.gif
+[vpi_simple]:images/vpi_simple_indicators.gif
+[vpi_icons]:images/vpi_icon_indicators.gif
+[psts_title]:images/psts_title_indicators.gif
+
+<!-- Links -->
+[vpi_github_lib]:https://github.com/JakeWharton/ViewPagerIndicator/
+[vpi_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/java/eu/dubedout/vincent/viewpagerindicatorslibraries/components/viewpagerindicatoractivity/ViewPagerIndicatorActivity.java
+
+[pagerSlidingTabStrip_github_lib]:https://github.com/astuetz/PagerSlidingTabStrip
+[pagerSlidingTabStrip_sample_code]:
+
 
 
 
