@@ -27,29 +27,61 @@ Tab clickable but without ripple effect
 ## Title
 ![Spring Indicator][springindicator_gif]
 
-
-https://github.com/rubensousa/ViewPagerCards 1500 stars
-pros:  beautiful
-cons: can be done just by stylings views displayed
-
-https://github.com/LyndonChin/AndroidRubberIndicator 1300 stars
+# RubberIndicator (LyndonChin)
+1315 stars, 6 issues, 1 Pull Request
 Rubber Indicator, next indicators goes around Big current one
 
-https://github.com/DevLight-Mobile-Agency/NavigationTabStrip 1000 stars
-pros: smooth elastic scroll
+## Design
+![AndroidRubberIndicator][androidRubberIndicator_gif]
 
-https://github.com/badoualy/stepper-indicator 830 stars
+## Pros/Cons
+pros: nice looking
+cons: 1 major bug unsolved, inactivity, not on Jcenter
+
+# DevLight NavigationTabTrip
+1109 stars, 4 issues
+
+## Title
+![Navigation Tab Strip][devlight_navigationtabstrip]
+
+## Pros / Cons
++ setTitle outside of viewPager
++ Nice looking
++ Easy theming
+- setTitle doesn't apply title change right now (after next swipe)
+
+# Stepper Indicator
+830 Stars, 6 issues, 2 Pull Requests, [Library,][stepperindicator_github_lib]
+
+## Design
+![Android Stepper Indicator][stepperindicator]
+
+## Pros/Cons
 multi step indicator, beautiful, clean material, animations
 
-https://github.com/hackware1993/MagicIndicator 800 star
-pros: classic complete, lot of choice
-cons: commits language unknown
+# Magic Indicator
+1000 stars, https://github.com/hackware1993/MagicIndicator
 
-https://github.com/eccyan/SpinningTabStrip 260 stars
-as classic + spinning in scroll
+## Designs
+![Magic Indicator][magicindicator]
 
-https://github.com/THEONE10211024/CircleIndicator 215 stars
-as the name suggests
+## Pros/Cons
++ very active
++ lots of designs
+- Non english commits
+
+# Circle Indicator
+215 stars, 4 issues https://github.com/THEONE10211024/CircleIndicator 
+no jcenter... worth putting it here?
+
+## Design
+ add it
+ 
+## Pros/Cons
+low activity
+10 commits only
+
+
 
 https://github.com/DavidPacioianu/InkPageIndicator 200 stars
 circle with latency, "ink". Comes from plaid material showcase https://github.com/nickbutcher/plaid
@@ -90,6 +122,10 @@ cons: low support, new
 [vpi_icons]:images/vpi_icon_indicators.gif
 [psts_title]:images/psts_title_indicators.gif
 [springindicator_gif]:images/springindicator_title_indicators.gif
+[androidRubberIndicator_gif]:images/androidrubberindicator.gif
+[devlight_navigationtabstrip]:images/devlight_navigationtabstrip.gif
+[stepperindicator]:images/stepperindicator.gif
+[magicindicator]:images/magicindicator.gif
 
 <!-- Links -->
 [vpi_github_lib]:https://github.com/JakeWharton/ViewPagerIndicator/
@@ -100,6 +136,13 @@ cons: low support, new
 
 [springIndicator_github_lib]:https://github.com/chenupt/SpringIndicator
 [springIndicator_sample_code]:https://github.com/vdubedout/ViewPagerIndicators-Libraries/blob/master/ViewPagerIndicatorsLibraries/app/src/main/res/layout/activity_spring_indicator.xml
+
+[androidRubberIndicator_github_lib]:https://github.com/LyndonChin/AndroidRubberIndicator
+
+[devlight_navigationtabstrip_github_lib]:https://github.com/DevLight-Mobile-Agency/NavigationTabStrip
+
+[stepperindicator_github_lib]:https://github.com/badoualy/stepper-indicator
+
 
 
 

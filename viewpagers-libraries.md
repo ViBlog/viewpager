@@ -4,6 +4,10 @@ https://github.com/DevLight-Mobile-Agency/InfiniteCycleViewPager 2500 star
 pros: company support, 3d view
 cons:
 
+https://github.com/rubensousa/ViewPagerCards 1500 stars
+pros:  beautiful
+cons: can be done just by stylings views displayed
+
 https://github.com/syedowaisali/crystal-viewpager star 25
 viewpager with different animations
 
