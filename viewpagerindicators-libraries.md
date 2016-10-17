@@ -60,7 +60,7 @@ cons: 1 major bug unsolved, inactivity, not on Jcenter
 multi step indicator, beautiful, clean material, animations
 
 # Magic Indicator
-1000 stars, https://github.com/hackware1993/MagicIndicator
+1000 stars, [Library, ][magicindicator_github_lib]
 
 ## Designs
 ![Magic Indicator][magicindicator]
@@ -71,7 +71,7 @@ multi step indicator, beautiful, clean material, animations
 - Non english commits
 
 # Circle Indicator
-215 stars, 4 issues https://github.com/THEONE10211024/CircleIndicator 
+215 stars, 4 issues, [Library, ][circlepagerindicator_github_lib]
 no jcenter... worth putting it here?
 
 ## Design
@@ -81,38 +81,43 @@ no jcenter... worth putting it here?
 low activity
 10 commits only
 
+# Ink Page Indicator (David Pacioianu)
+200 stars, 8 issues, 1 Pull Request [Library, ][inkpageindicator_github_lib]
 
+## Design
+![Ink Page Indicator][inkpageindicator]
 
-https://github.com/DavidPacioianu/InkPageIndicator 200 stars
+## Pro/Cons
 circle with latency, "ink". Comes from plaid material showcase https://github.com/nickbutcher/plaid
 cons pull requests "waitings" issues found not fixed
 
-https://github.com/nekocode/ToolbarIndicator 150 stars
-toolbar indicator + circle indicator
+# Toolbar Indicator
+161 stars [Library, ][toolbarindicator_github_lib]
 
-https://github.com/brucetoo/GradientTabStrip 70 stars
-needs more checking with testing
+## Design
+create it
 
-https://github.com/bhargavms/PodSlider stars 57
-buble slider, nice animation,
-cons: low support
+## Pro/Cons
+Low visibility
 
-https://github.com/sembozdemir/ViewPagerArrowIndicator 50 stars
-clean / simple / arrows right left
+# Pod Slider
+60 stars, [Library, ][podslider_github_lib]
 
-https://github.com/siriscac/ProgressPageIndicator stars 47
-progress circle
+## Design
+![Pod Slider][podslider_green]
 
-https://github.com/patryk1007/ZoomHeaderViewPager 45 stars
-cons: low support,styling viewpagerindicator does the same
+## Pro/Cons
++ no issues
++ reactive
+- Low visibility
 
-https://github.com/gilgoldzweig/EasyTabs 30 stars
-low number of people
-interesting idea ( readme not very engaging )
+# Ultra Indicator
+25 stars, [Library, ][ultraindicator_github_lib]
 
-Check TabLayout android for creating pagerindicator custom with binding
+## Design
+![Ultra Indicator][ultraindicator]
 
-https://github.com/andyxialm/UltraIndicator 23 stars
+## Pro/Cons
 pros: different way to display indicators
 cons: low support, new
 
@@ -126,6 +131,10 @@ cons: low support, new
 [devlight_navigationtabstrip]:images/devlight_navigationtabstrip.gif
 [stepperindicator]:images/stepperindicator.gif
 [magicindicator]:images/magicindicator.gif
+<!--  Circle indicator image -->
+[inkpageindicator]:images/inkpageindicator.gif
+[podslider_green]:images/podslider_green.gif
+[ultraindicator]:images/ultraindicator.gif
 
 <!-- Links -->
 [vpi_github_lib]:https://github.com/JakeWharton/ViewPagerIndicator/
@@ -142,6 +151,17 @@ cons: low support, new
 [devlight_navigationtabstrip_github_lib]:https://github.com/DevLight-Mobile-Agency/NavigationTabStrip
 
 [stepperindicator_github_lib]:https://github.com/badoualy/stepper-indicator
+
+[magicindicator_github_link]:https://github.com/hackware1993/MagicIndicator
+
+[circlepagerindicator_github_lib]:https://github.com/THEONE10211024/CircleIndicator
+
+[inkpageindicator_github_lib]:https://github.com/DavidPacioianu/InkPageIndicator
+
+[toolbarindicator_github_lib]:https://github.com/nekocode/ToolbarIndicator
+
+[ultraindicator_github_lib]:https://github.com/andyxialm/UltraIndicator
+
 
 
 
