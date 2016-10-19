@@ -22,6 +22,9 @@ Tab clickable but without ripple effect
 
 Same as the previous library, with 3 years without updates, it doesn't support Material Ripple effect and you will have to create it by hand. I would prefer the Delight NavigationTabStrip (below) instead.
 
+```compile 'com.astuetz:pagerslidingtabstrip:1.0.1'```
+
+
 ## Title
 Tab clickable but without ripple effect  
 ![PagerSlidingTabStrip Title][psts_title]
@@ -30,6 +33,8 @@ Tab clickable but without ripple effect
 1650 stars, 15 issues, 3 Pull Requests. [Library,][springIndicator_github_lib][ _Sample Code._][springIndicator_sample_code]
 
 I didn't know this one and I was really impressed by it. Works flawlessly, really easy to configure. I love the effect by sliding. It doesn't really fit with titles, I would use it for simple indicators without titles where it shines.
+
+```compile 'com.github.chenupt.android:springindicator:1.0.2@aar'```
 
 ## Title
 ![Spring Indicator][springindicator_gif]
@@ -42,6 +47,15 @@ I didn't know this one and I was really impressed by it. Works flawlessly, reall
 
 Rubber indicator is a nice discovery too. Inspired by a web version it have a nice animation we some rebound. This library have some drawback. One major bug is unsolved and there is no activity for some time. Unfortunately you can't find it on JCenter. Jitpack can help you there if you still want to use the gradle compile.
 
+```
+allprojects {
+    repositories {
+        [...]
+        maven { url "https://jitpack.io" }
+```
+
+```compile 'com.github.LyndonChin:AndroidRubberIndicator:ea734614d3'```
+
 ## Design
 ![AndroidRubberIndicator][androidRubberIndicator_gif]
 <!-- Needs self example -->
@@ -50,6 +64,13 @@ Rubber indicator is a nice discovery too. Inspired by a web version it have a ni
 1109 stars, 4 issues, [Library, ][devlight_navigationtabstrip_github_lib]
 
 This is my little favorite, I was looking for a slick, material, good looking library for our last product. It's really easy to configure in XML. It has some drawbacks, first you need to send the title using their ```setTitle(String... args)``` method and you can't ```notifyDataSetChanged()```. But I actually prefer it this way instead of returning a getPageTitle in the adapter, handling a ```Context``` to use the ```getString()```. It can be a problem if your ViewPager titles tend to change often. 
+```
+allprojects {
+    repositories {
+        [...]
+        maven { url 'http://dl.bintray.com/gigamole/maven/' }
+```
+```compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:1.0.4'```
 
 ## Title
 ![Navigation Tab Strip][devlight_navigationtabstrip]
@@ -59,13 +80,29 @@ This is my little favorite, I was looking for a slick, material, good looking li
 
 Stepper Indicator is the **perfect fit** for your Onboarding. This library is still young but very promising. Animations are perfect, well executed. Congrats to the developer. 
 
+```
+allprojects {
+    repositories {
+        [...]
+        maven { url "https://jitpack.io" }
+```
+```compile 'com.github.badoualy:stepper-indicator:1.0.6'```
+
 ## Design
 ![Android Stepper Indicator][stepperindicator]
 
 # Magic Indicator
-1000 stars, 2 issues,[Library, ][magicindicator_github_lib]
+1000 stars, 2 issues, [Library.][magicindicator_github_link]
 
 This is the most impressive of all the ViewPager Indicator libraries. Simple, it groups all the previous one in a single library. The saddest thing? All commits are in chinese... I have to be able to see what have been changed in the commits without spending time in the code. If you can speak Chinese, don't look further it's the library you need.
+
+```
+allprojects {
+    repositories {
+        [...]
+        maven { url "https://jitpack.io" }
+```
+```compile 'com.github.hackware1993:MagicIndicator:1.4.0'```
 
 ## Designs
 ![Magic Indicator][magicindicator]
@@ -73,15 +110,26 @@ This is the most impressive of all the ViewPager Indicator libraries. Simple, it
 # Circle Indicator
 215 stars, 4 issues, [Library. ][circlepagerindicator_github_lib]
 
-Classic circle indicator, It can be an alternative of the ViewPagerIndicator from Jake Wharton with some drawbacks. No JCenter, No JitPack, you will have to do this manually. It can be configured easily via XML with some little mode changes. Only 10 commits on the lib, low activity with some issues. I'm still wondering if using this of the Jake's one.
+Classic circle indicator, It can be an alternative of the ViewPagerIndicator from Jake Wharton with some drawbacks. No JCenter, No JitPack, you will have to do this manually. It can be configured easily via XML with some little mode changes. Only 10 commits on the lib, low activity with some issues. I would probably use Jake Wharton library for something like this. I have created a jitpack build if you want to use it (waiting that my pull request in his library will be merged)
+
+```
+allprojects {
+    repositories {
+        [...]
+        maven { url "https://jitpack.io" }
+```
+```compile 'com.github.ViFork:CircleIndicator:234db76d94'```
+
 
 ## Design
- add it
+ <!-- add it -->
  
 # Ink Page Indicator (David Pacioianu)
 200 stars, 8 issues, 1 Pull Request, [Library, ][inkpageindicator_github_lib]
 
 Very similar to SpringIndicator, the only difference is that the plain circle move last in the animation. Some issues not solved and no activity for the past 4 months. It stills look as a possible candidate if you really need this animation instead of Spring Indicator library.
+
+```compile 'com.pacioianu.david:ink-page-indicator:1.2.0'```
 
 ## Design
 ![Ink Page Indicator][inkpageindicator]
