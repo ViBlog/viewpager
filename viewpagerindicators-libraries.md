@@ -1,8 +1,11 @@
-Android?
-PagerSlidingTabStrip
+Let's have a sneak peak about the ViewPager Indicator libraries you should now and what happened for some. In this article, we will start from the most starred one to the least one.
 
 # ViewPagerIndicator (Jake Wharton) 
 8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Library,][vpi_github_lib][ _Sample code._][vpi_sample_code]  
+
+Grandfather of all of them, this library haven't changed for the last 4 years. I would avoid it for the lack of material ripple effect, and the hard time theming the TitlePageIndicator. On the other hand, the simple indicators still works well and are easily customisable.
+
+```compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'```
 
 ## Title
 Tab clickable but without ripple effect  
@@ -17,6 +20,8 @@ Tab clickable but without ripple effect
 # PagerSlidingTabStrip (Andreas Stuetz)
 5500 stars, 153 issues, 53 Pull Requests, no activity for 3 years. [Library,][pagerSlidingTabStrip_github_lib][ _Sample Code._][pagerSlidingTabStrip_sample_code]
 
+Same as the previous library, with 3 years without updates, it doesn't support Material Ripple effect and you will have to create it by hand. I would prefer the Delight NavigationTabStrip (below) instead.
+
 ## Title
 Tab clickable but without ripple effect  
 ![PagerSlidingTabStrip Title][psts_title]
@@ -24,102 +29,87 @@ Tab clickable but without ripple effect
 # SpringIndicator (Chenupt)
 1650 stars, 15 issues, 3 Pull Requests. [Library,][springIndicator_github_lib][ _Sample Code._][springIndicator_sample_code]
 
+I didn't know this one and I was really impressed by it. Works flawlessly, really easy to configure. I love the effect by sliding. It doesn't really fit with titles, I would use it for simple indicators without titles where it shines.
+
 ## Title
 ![Spring Indicator][springindicator_gif]
 
-# RubberIndicator (LyndonChin)
-1315 stars, 6 issues, 1 Pull Request
-Rubber Indicator, next indicators goes around Big current one
+## Simple Indicator
+<!-- Create example without titles -->
+
+# RubberIndicator (Lyndon Chin)
+1315 stars, 6 issues, 1 Pull Request. [Library, ][androidRubberIndicator_github_lib]
+
+Rubber indicator is a nice discovery too. Inspired by a web version it have a nice animation we some rebound. This library have some drawback. One major bug is unsolved and there is no activity for some time. Unfortunately you can't find it on JCenter. Jitpack can help you there if you still want to use the gradle compile.
 
 ## Design
 ![AndroidRubberIndicator][androidRubberIndicator_gif]
-
-## Pros/Cons
-pros: nice looking
-cons: 1 major bug unsolved, inactivity, not on Jcenter
+<!-- Needs self example -->
 
 # DevLight NavigationTabTrip
-1109 stars, 4 issues
+1109 stars, 4 issues, [Library, ][devlight_navigationtabstrip_github_lib]
+
+This is my little favorite, I was looking for a slick, material, good looking library for our last product. It's really easy to configure in XML. It has some drawbacks, first you need to send the title using their ```setTitle(String... args)``` method and you can't ```notifyDataSetChanged()```. But I actually prefer it this way instead of returning a getPageTitle in the adapter, handling a ```Context``` to use the ```getString()```. It can be a problem if your ViewPager titles tend to change often. 
 
 ## Title
 ![Navigation Tab Strip][devlight_navigationtabstrip]
 
-## Pros / Cons
-+ setTitle outside of viewPager
-+ Nice looking
-+ Easy theming
-- setTitle doesn't apply title change right now (after next swipe)
-
 # Stepper Indicator
 830 Stars, 6 issues, 2 Pull Requests, [Library,][stepperindicator_github_lib]
+
+Stepper Indicator is the **perfect fit** for your Onboarding. This library is still young but very promising. Animations are perfect, well executed. Congrats to the developer. 
 
 ## Design
 ![Android Stepper Indicator][stepperindicator]
 
-## Pros/Cons
-multi step indicator, beautiful, clean material, animations
-
 # Magic Indicator
-1000 stars, [Library, ][magicindicator_github_lib]
+1000 stars, 2 issues,[Library, ][magicindicator_github_lib]
+
+This is the most impressive of all the ViewPager Indicator libraries. Simple, it groups all the previous one in a single library. The saddest thing? All commits are in chinese... I have to be able to see what have been changed in the commits without spending time in the code. If you can speak Chinese, don't look further it's the library you need.
 
 ## Designs
 ![Magic Indicator][magicindicator]
 
-## Pros/Cons
-+ very active
-+ lots of designs
-- Non english commits
-
 # Circle Indicator
-215 stars, 4 issues, [Library, ][circlepagerindicator_github_lib]
-no jcenter... worth putting it here?
+215 stars, 4 issues, [Library. ][circlepagerindicator_github_lib]
+
+Classic circle indicator, It can be an alternative of the ViewPagerIndicator from Jake Wharton with some drawbacks. No JCenter, No JitPack, you will have to do this manually. It can be configured easily via XML with some little mode changes. Only 10 commits on the lib, low activity with some issues. I'm still wondering if using this of the Jake's one.
 
 ## Design
  add it
  
-## Pros/Cons
-low activity
-10 commits only
-
 # Ink Page Indicator (David Pacioianu)
-200 stars, 8 issues, 1 Pull Request [Library, ][inkpageindicator_github_lib]
+200 stars, 8 issues, 1 Pull Request, [Library, ][inkpageindicator_github_lib]
+
+Very similar to SpringIndicator, the only difference is that the plain circle move last in the animation. Some issues not solved and no activity for the past 4 months. It stills look as a possible candidate if you really need this animation instead of Spring Indicator library.
 
 ## Design
 ![Ink Page Indicator][inkpageindicator]
 
-## Pro/Cons
-circle with latency, "ink". Comes from plaid material showcase https://github.com/nickbutcher/plaid
-cons pull requests "waitings" issues found not fixed
-
 # Toolbar Indicator
-161 stars [Library, ][toolbarindicator_github_lib]
+161 stars, [Library, ][toolbarindicator_github_lib]
+
+Simple ActionBar Indicator with title that works well with beautiful fade in. 
 
 ## Design
 create it
 
-## Pro/Cons
-Low visibility
-
 # Pod Slider
 60 stars, [Library, ][podslider_github_lib]
+
+Pod Slider is a little library not well known featuring no issues and a reactive developer. It can be used for paging.
 
 ## Design
 ![Pod Slider][podslider_green]
 
-## Pro/Cons
-+ no issues
-+ reactive
-- Low visibility
-
 # Ultra Indicator
 25 stars, [Library, ][ultraindicator_github_lib]
+
+Little extra for your weird developer side. I don't know where you can implement this but it's a funny indicator.
 
 ## Design
 ![Ultra Indicator][ultraindicator]
 
-## Pro/Cons
-pros: different way to display indicators
-cons: low support, new
 
 <!-- Images -->
 [vpi_titles]:images/vpi_title_indicators.gif
