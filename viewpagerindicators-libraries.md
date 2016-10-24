@@ -1,7 +1,7 @@
 Let's have a sneak peak about the ViewPager Indicator libraries you should now and what happened for some. In this article, we will start from the most starred one to the least one.
 
 # ViewPagerIndicator (Jake Wharton) 
-8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Library,][vpi_github_lib][ _Sample code._][vpi_sample_code]  
+8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Github Repo, ][vpi_github_lib][ _Sample code._][vpi_sample_code]  
 
 Grandfather of all of them, this library haven't changed for the last 4 years. I would avoid it for the lack of material ripple effect, and the hard time theming the TitlePageIndicator. On the other hand, the simple indicators still works well and are easily customisable.
 
@@ -40,10 +40,10 @@ I didn't know this one and I was really impressed by it. Works flawlessly, reall
 ![Spring Indicator][springindicator_gif]
 
 ## Simple Indicator
-<!-- Create example without titles -->
+![Simple Spring Indicator][springindicator_simple_gif]
 
 # RubberIndicator (Lyndon Chin)
-1315 stars, 6 issues, 1 Pull Request. [Library, ][androidRubberIndicator_github_lib]
+1315 stars, 6 issues, 1 Pull Request. [Github Repo, ][androidRubberIndicator_github_lib]
 
 Rubber indicator is a nice discovery too. Inspired by a web version it have a nice animation we some rebound. This library have some drawback. One major bug is unsolved and there is no activity for some time. Unfortunately you can't find it on JCenter. Jitpack can help you there if you still want to use the gradle compile.
 
@@ -61,7 +61,7 @@ allprojects {
 <!-- Needs self example -->
 
 # DevLight NavigationTabTrip
-1109 stars, 4 issues, [Library, ][devlight_navigationtabstrip_github_lib]
+1109 stars, 4 issues, [Github Repo, ][devlight_navigationtabstrip_github_lib]
 
 This is my little favorite, I was looking for a slick, material, good looking library for our last product. It's really easy to configure in XML. It has some drawbacks, first you need to send the title using their ```setTitle(String... args)``` method and you can't ```notifyDataSetChanged()```. But I actually prefer it this way instead of returning a getPageTitle in the adapter, handling a ```Context``` to use the ```getString()```. It can be a problem if your ViewPager titles tend to change often. 
 ```
@@ -107,6 +107,12 @@ allprojects {
 ## Designs
 ![Magic Indicator][magicindicator]
 
+# Pager Indicator View (Roman Danylyk)
+https://github.com/romandanylyk/PageIndicatorView
+
+
+
+
 # Circle Indicator
 215 stars, 4 issues, [Library. ][circlepagerindicator_github_lib]
 
@@ -125,7 +131,7 @@ allprojects {
  <!-- add it -->
  
 # Ink Page Indicator (David Pacioianu)
-200 stars, 8 issues, 1 Pull Request, [Library, ][inkpageindicator_github_lib]
+200 stars, 8 issues, 1 Pull Request, [Github Repo, ][inkpageindicator_github_lib]
 
 Very similar to SpringIndicator, the only difference is that the plain circle move last in the animation. Some issues not solved and no activity for the past 4 months. It stills look as a possible candidate if you really need this animation instead of Spring Indicator library.
 
@@ -135,7 +141,7 @@ Very similar to SpringIndicator, the only difference is that the plain circle mo
 ![Ink Page Indicator][inkpageindicator]
 
 # Toolbar Indicator
-161 stars, [Library, ][toolbarindicator_github_lib]
+161 stars, [Github Repo, ][toolbarindicator_github_lib]
 
 Simple ActionBar Indicator with title that works well with beautiful fade in. 
 
@@ -143,7 +149,7 @@ Simple ActionBar Indicator with title that works well with beautiful fade in.
 create it
 
 # Pod Slider
-60 stars, [Library, ][podslider_github_lib]
+60 stars, [Github Repo, ][podslider_github_lib]
 
 Pod Slider is a little library not well known featuring no issues and a reactive developer. It can be used for paging.
 
@@ -151,7 +157,7 @@ Pod Slider is a little library not well known featuring no issues and a reactive
 ![Pod Slider][podslider_green]
 
 # Ultra Indicator
-25 stars, [Library, ][ultraindicator_github_lib]
+25 stars, [Github Repo, ][ultraindicator_github_lib]
 
 Little extra for your weird developer side. I don't know where you can implement this but it's a funny indicator.
 
@@ -165,6 +171,7 @@ Little extra for your weird developer side. I don't know where you can implement
 [vpi_icons]:images/vpi_icon_indicators.gif
 [psts_title]:images/psts_title_indicators.gif
 [springindicator_gif]:images/springindicator_title_indicators.gif
+[springindicator_simple_gif]:images/springindicator_title_indicators_without_title.gif
 [androidRubberIndicator_gif]:images/androidrubberindicator.gif
 [devlight_navigationtabstrip]:images/devlight_navigationtabstrip.gif
 [stepperindicator]:images/stepperindicator.gif
