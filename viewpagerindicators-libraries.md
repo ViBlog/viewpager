@@ -172,7 +172,7 @@ Little extra for your weird developer side. I don't know where you can implement
 [springindicator_gif]:images/springindicator_title_indicators.gif
 [springindicator_simple_gif]:images/springindicator_title_indicators_without_title.gif
 [androidRubberIndicator_gif]:images/android_rubber_indicator_simple.gif
-[devlight_navigationtabstrip]:images/devlight_navigationtabstrip.gif
+[devlight_navigationtabstrip]:images/devlight_navigation_tab_strip_title.gif
 [stepperindicator]:images/stepperindicator.gif
 [magicindicator]:images/magicindicator.gif
 <!--  Circle indicator image -->
