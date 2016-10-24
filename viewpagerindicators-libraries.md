@@ -1,4 +1,4 @@
-Let's have a sneak peak about the ViewPager Indicator libraries you should now and what happened for some. In this article, we will start from the most starred one to the least one.
+Let's have a sneak peak about the ViewPager Indicator libraries you should know and what happened for some. In this article, we will start from the most starred one to the least one.
 
 # ViewPagerIndicator (Jake Wharton) 
 8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Github Repo, ][vpi_github_lib][ _Sample code._][vpi_sample_code]  
@@ -36,11 +36,12 @@ I didn't know this one and I was really impressed by it. Works flawlessly, reall
 
 ```compile 'com.github.chenupt.android:springindicator:1.0.2@aar'```
 
+## Simple Indicator
+![Simple Spring Indicator][springindicator_simple_gif]
+
 ## Title
 ![Spring Indicator][springindicator_gif]
 
-## Simple Indicator
-![Simple Spring Indicator][springindicator_simple_gif]
 
 # RubberIndicator (Lyndon Chin)
 1315 stars, 6 issues, 1 Pull Request. [Github Repo, ][androidRubberIndicator_github_lib]
@@ -62,7 +63,8 @@ allprojects {
 # DevLight NavigationTabTrip
 1109 stars, 4 issues, [Github Repo, ][devlight_navigationtabstrip_github_lib]
 
-This is my little favorite, I was looking for a slick, material, good looking library for our last product. It's really easy to configure in XML. It has some drawbacks, first you need to send the title using their ```setTitle(String... args)``` method and you can't ```notifyDataSetChanged()```. But I actually prefer it this way instead of returning a getPageTitle in the adapter, handling a ```Context``` to use the ```getString()```. It can be a problem if your ViewPager titles tend to change often. 
+This is my little favorite, I was looking for a slick, material, good looking library for our last product. It's really easy to configure in XML. It has some drawbacks, first you need to send the title using their ```setTitle(String... args)``` method and you can't ```notifyDataSetChanged()```. But I actually prefer it this way instead of returning a getPageTitle in the adapter (and handling a ```Context``` to use the ```getString()```). It can be a problem if your ViewPager titles tend to change often. 
+
 ```
 allprojects {
     repositories {
