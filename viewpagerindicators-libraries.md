@@ -45,7 +45,7 @@ I didn't know this one and I was really impressed by it. Works flawlessly, reall
 # RubberIndicator (Lyndon Chin)
 1315 stars, 6 issues, 1 Pull Request. [Github Repo, ][androidRubberIndicator_github_lib]
 
-Rubber indicator is a nice discovery too. Inspired by a web version it have a nice animation we some rebound. This library have some drawback. One major bug is unsolved and there is no activity for some time. Unfortunately you can't find it on JCenter. Jitpack can help you there if you still want to use the gradle compile.
+Rubber indicator is a nice discovery too. Inspired by a web version it have a nice animation with some rebound. I would love to use this library but it have some drawback. One major bug is unsolved and there is no activity for some time. If you want theming, only colors are available for now and you will have a hard time for resizing this view. To finish, you can't find it on JCenter. Jitpack can help you there if you still want to use the gradle compile.
 
 ```
 allprojects {
@@ -58,7 +58,6 @@ allprojects {
 
 ## Design
 ![AndroidRubberIndicator][androidRubberIndicator_gif]
-<!-- Needs self example -->
 
 # DevLight NavigationTabTrip
 1109 stars, 4 issues, [Github Repo, ][devlight_navigationtabstrip_github_lib]
@@ -172,7 +171,7 @@ Little extra for your weird developer side. I don't know where you can implement
 [psts_title]:images/psts_title_indicators.gif
 [springindicator_gif]:images/springindicator_title_indicators.gif
 [springindicator_simple_gif]:images/springindicator_title_indicators_without_title.gif
-[androidRubberIndicator_gif]:images/androidrubberindicator.gif
+[androidRubberIndicator_gif]:images/android_rubber_indicator_simple.gif
 [devlight_navigationtabstrip]:images/devlight_navigationtabstrip.gif
 [stepperindicator]:images/stepperindicator.gif
 [magicindicator]:images/magicindicator.gif
