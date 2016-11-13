@@ -1,13 +1,14 @@
-When we use to work on **View Pager Indicators** some years ago we had only one library that we should know: ViewPagerIndicator. It was an awesome job at the time, but we have to let it go. With four years of inactivity and Material Design that have taken over, we should look to **better-suited libraries**. The good news? There is plenty of them, and I will cover some of them and show you how they look in this, _"I have no time to loose to check them all"_ blog post.
+When we used to work on **View Pager Indicators** some years ago, we had only one library that we should know: ViewPagerIndicator. It was an awesome job at the time, but we have to let it go. With four years of inactivity and Material Design that have taken over, we should look to **better-suited libraries**. The good news? There is plenty of them, and I will cover some of them and show you how they look in this, _"I have no time to loose to check them all"_ blog post.
 
 As usual, try to contribute to the libraries you use daily. It will help us all in the end.
-
+  
+  
 # ViewPagerIndicator (Jake Wharton) 
-8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Github, ][vpi_github_lib][ _Sample code._][vpi_sample_code]  
+8150 stars, 127 issues, 80 Pull Requests, no activity for 4 years. [Github,][vpi_github_lib] [_Sample code._][vpi_sample_code]  
 
 Grandfather of all of them, this library haven't changed for the last four years. I would avoid it for the lack of material ripple effect, and the hard time for theming the TitlePageIndicator. The simple indicators still work well, are easily customizable but no commits for the last years makes me think twice before using it.
 
-```compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'```
+`compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'`
 
 ## Title
 Tab clickable but without ripple effect  
@@ -18,13 +19,14 @@ Tab clickable but without ripple effect
 
 ## Icon
 ![ViewPagerIndicator Icons][vpi_icons] 
-
+ 
+  
 # PagerSlidingTabStrip (Andreas Stuetz)
-5500 stars, 153 issues, 53 Pull Requests, no activity for 3 years. [Github,][pagerSlidingTabStrip_github_lib][ _Sample Code._][pagerSlidingTabStrip_sample_code]
+5500 stars, 153 issues, 53 Pull Requests, no activity for 3 years. [Github,][pagerSlidingTabStrip_github_lib] [ _Sample Code._][pagerSlidingTabStrip_sample_code]
 
 Same as the previous library, with three years without updates, it doesn't support Material Ripple effect, and you will have to create it by hand. I would prefer the Delight NavigationTabStrip (below) instead.
 
-```compile 'com.astuetz:pagerslidingtabstrip:1.0.1'```
+`compile 'com.astuetz:pagerslidingtabstrip:1.0.1'`
 
 
 ## Title
@@ -32,18 +34,18 @@ Tab clickable but without ripple effect
 ![PagerSlidingTabStrip Title][psts_title]
 
 # SpringIndicator (Chenupt)
-1650 stars, 15 issues, 3 Pull Requests. [Github, ][springIndicator_github_lib][ _Sample Code._][springIndicator_sample_code]
+1650 stars, 15 issues, 3 Pull Requests. [Github,][springIndicator_github_lib] [_Sample Code._][springIndicator_sample_code]
 
 I didn't know this one, and I was impressed. Works flawlessly, really easy to configure. I love the sliding effect. Use it for simple indicators like picture libraries (without titles) where it shines.
 
-```compile 'com.github.chenupt.android:springindicator:1.0.2@aar'```
+`compile 'com.github.chenupt.android:springindicator:1.0.2@aar'`
 
 ## Simple Indicator
 ![Simple Spring Indicator][springindicator_simple_gif]
 
 ## Title
-![Spring Indicator][springindicator_gif]
-
+![Spring Indicator][springindicator_1_gif]  
+![Spring Indicator][springindicator_2_gif]
 
 # RubberIndicator (Lyndon Chin)
 1315 stars, 6 issues, 1 Pull Request. [Github][androidRubberIndicator_github_lib]
@@ -57,7 +59,7 @@ allprojects {
         maven { url "https://jitpack.io" }
 ```
 
-```compile 'com.github.LyndonChin:AndroidRubberIndicator:ea734614d3'```
+`compile 'com.github.LyndonChin:AndroidRubberIndicator:ea734614d3'`
 
 ## Design
 ![AndroidRubberIndicator][androidRubberIndicator_gif]
@@ -73,7 +75,7 @@ allprojects {
         [...]
         maven { url 'http://dl.bintray.com/gigamole/maven/' }
 ```
-```compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:1.0.4'```
+`compile 'com.github.devlight.navigationtabstrip:navigationtabstrip:1.0.4'`
 
 ## Title
 ![Navigation Tab Strip][devlight_navigationtabstrip]
@@ -89,7 +91,7 @@ allprojects {
         [...]
         maven { url "https://jitpack.io" }
 ```
-```compile 'com.github.badoualy:stepper-indicator:1.0.6'```
+`compile 'com.github.badoualy:stepper-indicator:1.0.6'`
 
 ## Design
 ![Android Stepper Indicator][stepperindicator]
@@ -105,7 +107,7 @@ allprojects {
         [...]
         maven { url "https://jitpack.io" }
 ```
-```compile 'com.github.hackware1993:MagicIndicator:1.4.0'```
+`compile 'com.github.hackware1993:MagicIndicator:1.4.0'`
 
 ## Designs
 ![Magic Indicator][magicindicator]
@@ -115,18 +117,32 @@ allprojects {
 
 Circle Indicator library that si the perfect alternative to the ```ViewPagerIndicator.CircleIndicator```. The developer is very reactive, it can be configured easily via XML and the documentation is well written. _Just Use It_ 
 
-```compile 'com.romandanylyk:pageindicatorview:0.0.7'```
+`compile 'com.romandanylyk:pageindicatorview:0.0.7'`
 
 ## Designs
-Name| Support version| Preview
--------- | --- | ---
-`AnimationType.NONE`| 0.0.1 | ![anim_prev_none][pageindicatorview_none]
-`AnimationType.COLOR`| 0.0.1 |![anim_prev_color][pageindicatorview_color]
-`AnimationType.SCALE`| 0.0.1 |![anim_prev_scale][pageindicatorview_scale]
-`AnimationType.SLIDE`| 0.0.1 |![anim_prev_slide][pageindicatorview_slide]
-`AnimationType.WORM`| 0.0.1 |![anim_prev_worm][pageindicatorview_worm]
-`AnimationType.FILL`| 0.0.6 |![anim_prev_worm][pageindicatorview_fill]
-`AnimationType.THIN_WORM`| 0.0.7 |![anim_prev_thin_worm][pageindicatorview_thinworm]
+
+`AnimationType.NONE` added in 0.0.1  
+![anim_prev_none][pageindicatorview_none]  
+
+`AnimationType.COLOR` added in 0.0.1  
+![anim_prev_color][pageindicatorview_color]  
+
+`AnimationType.SCALE` added in 0.0.1  
+![anim_prev_scale][pageindicatorview_scale]  
+
+`AnimationType.SLIDE` added in 0.0.1  
+![anim_prev_slide][pageindicatorview_slide]  
+
+`AnimationType.WORM` added in 0.0.1  
+![anim_prev_worm][pageindicatorview_worm]  
+
+`AnimationType.FILL` added in 0.0.6  
+![anim_prev_worm][pageindicatorview_fill]  
+
+`AnimationType.THIN_WORM` added in 0.0.7  
+![anim_prev_thin_worm][pageindicatorview_thinworm]  
+     
+
 
  
 # Ink Page Indicator (David Pacioianu)
@@ -134,7 +150,7 @@ Name| Support version| Preview
 
 Very similar to SpringIndicator, the only difference is that the plain circle move last in the animation. Some issues not solved and no activity for the past four months. It stills look like a possible candidate if you need this animation instead of Spring Indicator or PagerIndicatorView library.
 
-```compile 'com.pacioianu.david:ink-page-indicator:1.2.0'```
+`compile 'com.pacioianu.david:ink-page-indicator:1.2.0'`
 
 ## Design
 ![Ink Page Indicator][inkpageindicator]
@@ -144,7 +160,7 @@ Very similar to SpringIndicator, the only difference is that the plain circle mo
 
 Pod Slider is a little library (not well known but promising) with no issues and a reactive developer. Used for paging and one letter titles.
 
-```compile 'com.github.bhargavms:PodSLider:1.2.0'```
+`compile 'com.github.bhargavms:PodSLider:1.2.0'`
 
 ## Design
 ![Pod Slider][podslider_green]
@@ -152,12 +168,14 @@ Pod Slider is a little library (not well known but promising) with no issues and
 # Conclusion
 We have taken a look at the most used libraries for ViewPager Indicators. It should cover all your needs and if you want to know how to implement it, take a look at this little app I've done for this purpose [here on github.][LibrarySampleCode]
 
+
 <!-- Images -->
 [vpi_titles]:images/vpi_title_indicators.gif
 [vpi_simple]:images/vpi_simple_indicators.gif
 [vpi_icons]:images/vpi_icon_indicators.gif
 [psts_title]:images/psts_title_indicators.gif
-[springindicator_gif]:images/springindicator_title_indicators.gif
+[springindicator_1_gif]:images/springindicator_title_indicators_1.gif
+[springindicator_2_gif]:images/springindicator_title_indicators_2.gif
 [springindicator_simple_gif]:images/springindicator_title_indicators_without_title.gif
 [androidRubberIndicator_gif]:images/android_rubber_indicator_simple.gif
 [devlight_navigationtabstrip]:images/devlight_navigation_tab_strip_title.gif
